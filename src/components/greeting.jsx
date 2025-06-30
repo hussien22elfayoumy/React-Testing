@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Output from './output';
 
 export default function Greeting() {
   const [changedText, setChangedText] = useState(false);
@@ -8,8 +9,8 @@ export default function Greeting() {
   return (
     <div>
       <h1>Hello world!</h1>
-      {!changedText && <p>It's good to see you!</p>}
-      {changedText && <p>Changed!</p>}
+      {!changedText && <Output>It's good to see you!</Output>}
+      {changedText && <Output>Changed!</Output>}
       <button onClick={handleChangeText}>Change Text!</button>
     </div>
   );
